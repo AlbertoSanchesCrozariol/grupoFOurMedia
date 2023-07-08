@@ -1,0 +1,20 @@
+<script>
+window.addEventListener('load', function() {
+  fetch('http://192.168.18.30')
+    .then(function(response) {
+      if (response.ok) {
+        return response.text();
+      } else {
+        throw new Error('Erro na solicitação GET: ' + response.status);
+      }
+    })
+    .then(function(data) {
+      console.log('Resposta do servidor:', data);
+    })
+    .catch(function(error) {
+      console.error('Erro:', error);
+    });
+});
+</script>
+
+<img src="https://scontent-gru2-1.xx.fbcdn.net/v/t39.30808-6/299841039_362290259453604_4135201796124685304_n.png?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeErQ5He2fpIdAX5dRfh3vQAO0HHjO4pF2w7QceM7ikXbNGDtPWWNJBpGVHse7OniHaU8nMIoRiRPOkXFUlpEWQd&_nc_ohc=i3ZAOhKyy-wAX9qcjKj&_nc_ht=scontent-gru2-1.xx&oh=00_AfCZhU5bCItqJDp46_pvi9ly0O5YsnSXs9evHewwMSxApw&oe=64AE5793" />
