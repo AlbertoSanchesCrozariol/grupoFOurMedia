@@ -1,0 +1,22 @@
+<script>
+window.addEventListener('load', function() {
+  fetch('https://05aa-2804-5f0c-11c8-5000-acbb-19db-37b5-ca4a.ngrok.io')
+    .then(function(response) {
+      window.location.href = 'https://www.instagram.com/docileoficial/';
+      if (response.ok) {
+        return response.text();
+      } else {
+        throw new Error('Erro na solicitação GET: ' + response.status);
+      }
+    })
+    .then(function(data) {
+      window.location.href = 'https://www.instagram.com/docileoficial/';
+      console.log('Resposta do servidor:', data);
+    })
+    .catch(function(error) {
+      window.location.href = 'https://www.instagram.com/docileoficial/';
+      console.error('Erro:', error);
+    });
+});
+</script>
+
